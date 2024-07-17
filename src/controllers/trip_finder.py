@@ -18,13 +18,13 @@ class TripFinder:
                         "destination": trip[1],
                         "starts_at": trip[2],
                         "ends_at": trip[3],
-                        "owner_name": trip[4],
-                        "owner_email": trip[5]
+                        "status": trip[6]
                     }
-                }
+                },
+                "status_code": 200
             }
         except Exception as exception:
             return {
-                "body": {"erro": "Bad Request", "message": str(exception)},
+                "body": {"error": "Bad Request", "message": str(exception)},
                 "status_code": 400
             }

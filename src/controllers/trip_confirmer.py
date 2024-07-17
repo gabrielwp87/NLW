@@ -8,7 +8,7 @@ class TripConfirmer:
     def confirm(self, trip_id) -> Dict:
         try:
             self.__trip_repository.update_trip_status(trip_id)
-            return {"bdoy": None, "status_code": 204}
+            return {"body": None, "status_code": 204}
         except Exception as exception:
             return {
                 "body": {"error": "Bad Request", "message": str(exception)},
