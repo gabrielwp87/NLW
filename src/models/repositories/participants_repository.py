@@ -12,7 +12,7 @@ class ParticipantsRepository:
             '''
                 INSERT INTO participants
                     (id, trip_id, emails_to_invite_id, name)
-                VALEUS
+                VALUES
                     (?, ?, ?, ?)
             ''', (
                 participant_infos["id"],
